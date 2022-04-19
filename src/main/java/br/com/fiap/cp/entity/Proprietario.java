@@ -21,10 +21,10 @@ public class Proprietario implements Serializable {
     @Column(name="cd_proprietario")
     private Long id;
 
-    @Column(name = "nm_proprietario")
+    @Column(name = "nm_proprietario", length = 55, nullable = false)
     private String nome;
 
-    @Column(name = "ds_cpf")
+    @Column(name = "ds_cpf", length = 15, nullable = false)
     private String cpf;
 
     @OneToOne(mappedBy = "proprietario", cascade = CascadeType.PERSIST)

@@ -24,7 +24,7 @@ public class Modelo implements Serializable {
     @Column(name="cd_modelo")
     private Long id;
 
-    @Column(name = "ds_modelo")
+    @Column(name = "ds_modelo", length = 55, nullable = false)
     private String descricao;
 
     @OneToMany(mappedBy = "modelo", fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)

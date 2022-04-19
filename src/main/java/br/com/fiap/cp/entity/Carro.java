@@ -25,13 +25,13 @@ public class Carro implements Serializable {
     @Column(name="cd_carro")
     private Long id;
 
-    @Column(name = "ds_placa")
+    @Column(name = "ds_placa", length = 7, nullable = false)
     private String placa;
 
-    @Column(name = "ds_cor")
+    @Column(name = "ds_cor", length = 20, nullable = false)
     private String cor;
 
-    @Column(name = "ds_chassi")
+    @Column(name = "ds_chassi", length = 20, nullable = false)
     private String chassi;
 
     @ManyToOne(cascade = CascadeType.MERGE)
